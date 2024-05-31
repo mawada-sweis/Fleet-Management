@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Add New Driver</h1>
+<div mat-dialog-content>
+  <form [formGroup]="driverForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Driver Name</mat-label>
+      <input matInput formControlName="DriverName">
+      <mat-error *ngIf="driverForm.get('DriverName')?.invalid">Driver Name is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Phone Number</mat-label>
+      <input matInput formControlName="PhoneNumber">
+      <mat-error *ngIf="driverForm.get('PhoneNumber')?.invalid">Phone Number is required</mat-error>
+    </mat-form-field>
+    <div mat-dialog-actions>
+      <button mat-button type="button" (click)="onCancel()">Cancel</button>
+      <button mat-button type="submit" [disabled]="driverForm.invalid">Add</button>
+    </div>
+  </form>
+</div>
