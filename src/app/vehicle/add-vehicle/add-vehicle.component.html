@@ -1,0 +1,10 @@
+<div class="add-vehicle-form">
+    <h3>Add Vehicle</h3>
+    <form (ngSubmit)="addVehicle()">
+      <label for="vehicleNumber">Vehicle Number:</label>
+      <input type="text" id="vehicleNumber" [(ngModel)]="newVehicle.VehicleNumber" name="vehicleNumber" required>
+      <label for="vehicleType">Vehicle Type:</label>
+      <input type="text" id="vehicleType" [(ngModel)]="newVehicle.VehicleType" name="vehicleType" required>
+      <button type="submit">Add Vehicle</button>
+    </form>
+  </div>  

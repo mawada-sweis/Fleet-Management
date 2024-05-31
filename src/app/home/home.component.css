@@ -1,0 +1,45 @@
+/* src/app/vehicle-information/vehicle-information.component.css */
+.vehicle-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  .vehicle-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .vehicle-table th,
+  .vehicle-table td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+  }
+  
+  .vehicle-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .vehicle-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .vehicle-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .vehicle-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+  }
+  
+  .vehicle-table p {
+    color: red;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  

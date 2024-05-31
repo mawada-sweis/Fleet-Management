@@ -1,0 +1,20 @@
+nav ul {
+    list-style-type: none;
+    padding-left: 5%;
+  }
+  
+  nav li {
+    margin: 10px 0;
+
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+  }
+  
+  nav a.active {
+    font-weight: bold;
+  }
+  

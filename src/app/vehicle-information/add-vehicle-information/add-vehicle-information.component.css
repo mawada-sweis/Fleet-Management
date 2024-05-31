@@ -1,0 +1,18 @@
+mat-form-field {
+    width: 100%;
+  }
+  
+  mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+  }
+  
+  .add-button {
+    margin-left: 10px;
+    background-color: #009879;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }

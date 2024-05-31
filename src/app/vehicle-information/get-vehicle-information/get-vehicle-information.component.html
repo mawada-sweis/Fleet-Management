@@ -1,0 +1,58 @@
+<h1>Vehicle Informations</h1>
+<button mat-button class="add-vehicle-form"(click)="openAddDialog()">
+  Add new Vehicle Information
+</button>
+
+<div *ngIf="errorMessage; else dataContent">
+  <p>{{ errorMessage }}</p>
+</div>
+<ng-template #dataContent>
+  <table class="vehicle-table" *ngIf="showTable">
+    <thead>
+      <tr>
+        <th>Vehicle ID</th>
+        <th>Driver ID</th>
+        <th>VehicleMake</th>
+        <th>Vehicle Model</th>
+        <th>Purchase Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehicle of VehiclesInformationsData; let i = index">
+        <td>{{ vehicle.VehicleID }}</td>
+        <td>{{ vehicle.DriverID }}</td>
+        <td>{{ vehicle.VehicleMake }}</td>
+        <td>{{ vehicle.VehicleModel }}</td>
+        <td>{{ vehicle.PurchaseDate }}</td>
+        <td>
+          <button class="edit-button" (click)="openEditDialog(vehicle, i)">Edit</button>
+          <button class="delete-button" (click)="openDeleteDialog(vehicle, i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>
+<ng-template #dialogTemplate let-dialogData="data">
+  <h2 mat-dialog-title>Vehicle Details</h2>
+  <mat-dialog-content>
+    <div *ngIf="dialogData">
+      <p><strong>Vehicle Number:</strong> {{ dialogData.VehicleNumber }}</p>
+      <p><strong>Vehicle Type:</strong> {{ dialogData.VehicleType }}</p>
+      <p><strong>Driver Name:</strong> {{ dialogData.DriverName }}</p>
+      <p><strong>Phone Number:</strong> {{ dialogData.PhoneNumber }}</p>
+      <p><strong>Last Position:</strong> {{ dialogData.LastPosition }}</p>
+      <p><strong>Vehicle Make:</strong> {{ dialogData.VehicleMake }}</p>
+      <p><strong>Vehicle Model:</strong> {{ dialogData.VehicleModel }}</p>
+      <p><strong>Last GPSTime:</strong> {{ dialogData.LastGPSTime }}</p>
+      <p><strong>Last GPSSpeed:</strong> {{ dialogData.LastGPSSpeed }}</p>
+      <p><strong>Last Address:</strong> {{ dialogData.LastAddress }}</p>
+    </div>
+    <div *ngIf="!dialogData">
+      <p>No details available.</p>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+  </mat-dialog-actions>
+</ng-template>
