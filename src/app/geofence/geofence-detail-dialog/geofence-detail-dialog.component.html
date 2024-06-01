@@ -1,0 +1,7 @@
+<h2>Geofence Details</h2>
+<div *ngIf="data">
+  <div *ngFor="let key of getKeys(data)">
+    <strong>{{ key }}:</strong> {{ data[key] }}
+  </div>
+</div>
+<button mat-button class="close" (click)="close()">Close</button>

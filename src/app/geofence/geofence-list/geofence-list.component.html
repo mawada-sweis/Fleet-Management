@@ -14,6 +14,7 @@
         <th>Stroke Weight</th>
         <th>Fill Color</th>
         <th>Fill Opacity</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -26,6 +27,7 @@
         <td>{{ geofence.StrockWeight }}</td>
         <td>{{ geofence.FillColor }}</td>
         <td>{{ geofence.FillOpacity }}</td>
+        <td><button class="show-more" (click)="showMore(geofence)">Show more</button></td>
       </tr>
     </tbody>
   </table>

@@ -9,6 +9,27 @@ export interface Geofence {
   FillOpacity: string;
 }
 
+export interface CircleGeofence {
+  GeofenceID: string;
+  Latitude: string;
+  Radius: string;
+  Longitude: string;
+}
+
+export interface PolygonGeofence {
+  GeofenceID: string;
+  Latitude: string;
+  Longitude: string;
+}
+
+export interface RectangleGeofence {
+  South: string;
+  North: string;
+  West: string;
+  East: string;
+  GeofenceID: string;
+}
+
 export interface GetGeofenceInformationResponse {
   DicOfDic: {
     Tags: {
@@ -17,5 +38,38 @@ export interface GetGeofenceInformationResponse {
   };
   DicOfDT: {
     Geofences: Geofence[];
+  };
+}
+
+export interface GetCircleGeofenceResponse {
+  DicOfDic: {
+    Tags: {
+      STS: string;
+    };
+  };
+  DicOfDT: {
+    CircleGeofence: CircleGeofence[];
+  };
+}
+
+export interface GetPolygonGeofenceResponse {
+  DicOfDic: {
+    Tags: {
+      STS: string;
+    };
+  };
+  DicOfDT: {
+    PolygonGeofence: PolygonGeofence[];
+  };
+}
+
+export interface GetRectangleGeofenceResponse {
+  DicOfDic: {
+    Tags: {
+      STS: string;
+    };
+  };
+  DicOfDT: {
+    RectangleGeofence: RectangleGeofence[];
   };
 }

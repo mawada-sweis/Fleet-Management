@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GeofenceService } from '../../services/geofence.service';
-import { Geofence } from '../geofence.model';
+import { CircleGeofence, Geofence, PolygonGeofence, RectangleGeofence } from '../geofence.model';
+import { MatDialog } from '@angular/material/dialog';
+import { GeofenceDetailDialogComponent } from '../geofence-detail-dialog/geofence-detail-dialog.component';
 
 @Component({
   selector: 'app-geofence-list',
@@ -9,9 +11,12 @@ import { Geofence } from '../geofence.model';
 })
 export class GeofenceListComponent implements OnInit {
   geofences: Geofence[] = [];
-  errorMessage: string | null = null;
+  circleGeofences: CircleGeofence[] = [];
+  polygonGeofences: PolygonGeofence[] = [];
+  rectangleGeofences: RectangleGeofence[] = [];
+  errorMessage: string = '';
 
-  constructor(private geofenceService: GeofenceService) {}
+  constructor(private geofenceService: GeofenceService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.loadGeofences();
@@ -34,6 +39,20 @@ export class GeofenceListComponent implements OnInit {
         console.error('Error loading geofences:', error);
         this.errorMessage = 'Failed to load geofences';
       }
+    );
+    this.geofenceService.getCircleGeofence().subscribe(
+      response => this.circleGeofences = response.DicOfDT.CircleGeofence,
+      error => this.errorMessage = 'Failed to load circle geofences.'
+    );
+
+    this.geofenceService.getPolygonGeofence().subscribe(
+      response => this.polygonGeofences = response.DicOfDT.PolygonGeofence,
+      error => this.errorMessage = 'Failed to load polygon geofences.'
+    );
+
+    this.geofenceService.getRectangleGeofence().subscribe(
+      response => this.rectangleGeofences = response.DicOfDT.RectangleGeofence,
+      error => this.errorMessage = 'Failed to load rectangle geofences.'
     );
   }
 
@@ -67,5 +86,26 @@ export class GeofenceListComponent implements OnInit {
     }).format(date);
 
     return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+  }
+  showMore(geofence: Geofence): void {
+    let geofenceDetails;
+
+    switch (geofence.GeofenceType) {
+      case 'Circle':
+        geofenceDetails = this.circleGeofences.find(g => g.GeofenceID === geofence.GeofenceID);
+        break;
+      case 'Polygon':
+        geofenceDetails = this.polygonGeofences.find(g => g.GeofenceID === geofence.GeofenceID);
+        break;
+      case 'Rectangle':
+        geofenceDetails = this.rectangleGeofences.find(g => g.GeofenceID === geofence.GeofenceID);
+        break;
+    }
+
+    if (geofenceDetails) {
+      this.dialog.open(GeofenceDetailDialogComponent, {
+        data: geofenceDetails
+      });
+    }
   }
 }

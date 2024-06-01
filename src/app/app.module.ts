@@ -36,6 +36,7 @@ import { DeleteDriverComponent } from './drivers/delete-driver/delete-driver.com
 import { GetRoutHistoryComponent } from './rout-history/get-rout-history/get-rout-history.component';
 import { AddRoutHistoryComponent } from './rout-history/add-rout-history/add-rout-history.component';
 import { GeofenceListComponent } from './geofence/geofence-list/geofence-list.component';
+import { GeofenceDetailDialogComponent } from './geofence/geofence-detail-dialog/geofence-detail-dialog.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { GeofenceListComponent } from './geofence/geofence-list/geofence-list.co
     GetRoutHistoryComponent,
     AddRoutHistoryComponent,
     GeofenceListComponent,
+    GeofenceDetailDialogComponent,
   ],
   imports: [
     BrowserModule,
