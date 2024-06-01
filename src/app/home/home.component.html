@@ -1,4 +1,4 @@
-<h1>Welcome to Home!</h1>
+<h1>Welcome to Fleet Mangement Website!</h1>
 <div *ngIf="errorMessage; else dataTable">
   <p>{{ errorMessage }}</p>
 </div>
@@ -28,7 +28,7 @@
         <td>{{ vehicle.LastAddress }}</td>
         <td>{{ vehicle.Latitude }}</td>
         <td>{{ vehicle.Longitude }}</td>
-        <td><button mat-button (click)="openDialog(vehicle.VehicleID)">Show More</button></td>
+        <td><button mat-button class="show-more" (click)="openDialog(vehicle.VehicleID)">Show More</button></td>
       </tr>
     </tbody>
   </table>

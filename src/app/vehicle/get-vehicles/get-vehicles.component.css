@@ -8,8 +8,6 @@
   }
   
   .vehicle-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
     text-align: left;
     font-weight: bold;
   }
@@ -26,10 +24,6 @@
   
   .vehicle-table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
-  }
-  
-  .vehicle-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
   }
   
   .vehicle-table tbody tr.active-row {
@@ -85,14 +79,14 @@
   }
   
   .edit-button {
-    padding: 8px 16px;
     background-color: #f0ad4e;
     color: white;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     font-size: 16px;
-    margin-right: 10px; 
+    margin: 1%;
+    padding: 8px 16px;
   }
   
   .edit-button:hover {
@@ -100,15 +94,17 @@
   }
   
   .delete-button {
-    padding: 8px 16px;
-    background-color: #ff7043; 
+    background-color: #cd4d26;
     color: white;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     font-size: 16px;
+    margin: 1%;
+    padding: 8px 16px;
   }
   
   .delete-button:hover {
-    background-color: #ff5722; 
+    background-color: #aa3a18;
   }
+  
