@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+
 import {
   MatDialogModule,
   MAT_DIALOG_DATA,
@@ -31,6 +33,8 @@ import { GetDriversComponent } from './drivers/get-drivers/get-drivers.component
 import { UpdateDriverComponent } from './drivers/update-driver/update-driver.component';
 import { AddDriverComponent } from './drivers/add-driver/add-driver.component';
 import { DeleteDriverComponent } from './drivers/delete-driver/delete-driver.component';
+import { GetRoutHistoryComponent } from './rout-history/get-rout-history/get-rout-history.component';
+import { AddRoutHistoryComponent } from './rout-history/add-rout-history/add-rout-history.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +53,8 @@ import { DeleteDriverComponent } from './drivers/delete-driver/delete-driver.com
     UpdateDriverComponent,
     AddDriverComponent,
     DeleteDriverComponent,
+    GetRoutHistoryComponent,
+    AddRoutHistoryComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +65,7 @@ import { DeleteDriverComponent } from './drivers/delete-driver/delete-driver.com
     MatTableModule,
     MatButtonModule,
     MatInputModule,
+    MatSelectModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,

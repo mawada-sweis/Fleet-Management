@@ -1,0 +1,50 @@
+<h1 mat-dialog-title>Add Route History</h1>
+<div mat-dialog-content>
+  <form [formGroup]="addRouteHistoryForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Vehicle</mat-label>
+      <mat-select formControlName="VehicleID">
+        <mat-option
+          *ngFor="let vehicle of vehicles"
+          [value]="vehicle.VehicleID"
+        >
+          {{ vehicle.VehicleID }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Vehicle Direction</mat-label>
+      <input matInput formControlName="VehicleDirection" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Longitude</mat-label>
+      <input matInput formControlName="Longitude" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Latitude</mat-label>
+      <input matInput formControlName="Latitude" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <input matInput formControlName="Status" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <input matInput formControlName="Address" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Vehicle Speed</mat-label>
+      <input matInput formControlName="VehicleSpeed" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Epoch</mat-label>
+      <input matInput formControlName="Epoch" />
+    </mat-form-field>
+    <div mat-dialog-actions>
+      <button mat-button type="button" (click)="onCancel()">Cancel</button>
+      <button mat-button type="submit" [disabled]="addRouteHistoryForm.invalid">
+        Add
+      </button>
+    </div>
+  </form>
+</div>

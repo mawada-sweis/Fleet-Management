@@ -1,0 +1,107 @@
+<div class="rout-history-container">
+  <h2>Route History</h2>
+  <button mat-button (click)="openAddDialog()">Add Route History</button>
+  <form [formGroup]="routeHistoryForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Vehicle</mat-label>
+      <mat-select formControlName="VehicleID">
+        <mat-option
+          *ngFor="let vehicle of vehicles"
+          [value]="vehicle.VehicleID"
+        >
+          {{ vehicle.VehicleID }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Start Epoch</mat-label>
+      <input matInput formControlName="StartEpoch" type="text" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>End Epoch</mat-label>
+      <input matInput formControlName="EndEpoch" type="text" />
+    </mat-form-field>
+    <button mat-button type="submit" [disabled]="routeHistoryForm.invalid">
+      Get Route History
+    </button>
+  </form>
+  <div *ngIf="errorMessage">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <table
+    *ngIf="routeHistories.length > 0"
+    mat-table
+    [dataSource]="routeHistories"
+    class="mat-elevation-z8"
+  >
+    <ng-container matColumnDef="VehicleID">
+      <th mat-header-cell *matHeaderCellDef>Vehicle ID</th>
+      <td mat-cell *matCellDef="let history">{{ history.VehicleID }}</td>
+    </ng-container>
+    <ng-container matColumnDef="GPSTime">
+      <th mat-header-cell *matHeaderCellDef>GPSTime</th>
+      <td mat-cell *matCellDef="let history">{{ history.GPSTime }}</td>
+    </ng-container>
+    <ng-container matColumnDef="VehicleDirection">
+      <th mat-header-cell *matHeaderCellDef>Vehicle Direction</th>
+      <td mat-cell *matCellDef="let history">{{ history.VehicleDirection }}</td>
+    </ng-container>
+    <ng-container matColumnDef="Longitude">
+      <th mat-header-cell *matHeaderCellDef>Longitude</th>
+      <td mat-cell *matCellDef="let history">{{ history.Longitude }}</td>
+    </ng-container>
+    <ng-container matColumnDef="Latitude">
+      <th mat-header-cell *matHeaderCellDef>Latitude</th>
+      <td mat-cell *matCellDef="let history">{{ history.Latitude }}</td>
+    </ng-container>
+    <ng-container matColumnDef="Status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let history">{{ history.Status }}</td>
+    </ng-container>
+    <ng-container matColumnDef="Address">
+      <th mat-header-cell *matHeaderCellDef>Address</th>
+      <td mat-cell *matCellDef="let history">{{ history.Address }}</td>
+    </ng-container>
+    <ng-container matColumnDef="GPSSpeed">
+      <th mat-header-cell *matHeaderCellDef>GPS Speed</th>
+      <td mat-cell *matCellDef="let history">{{ history.GPSSpeed }}</td>
+    </ng-container>
+    <ng-container matColumnDef="VehicleNumber">
+      <th mat-header-cell *matHeaderCellDef>Vehicle Number</th>
+      <td mat-cell *matCellDef="let history">{{ history.VehicleNumber }}</td>
+    </ng-container>
+
+    <tr
+      mat-header-row
+      *matHeaderRowDef="[
+        'VehicleID',
+        'GPSTime',
+        'VehicleDirection',
+        'Longitude',
+        'Latitude',
+        'Status',
+        'Address',
+        'GPSSpeed',
+        'VehicleNumber'
+      ]"
+    ></tr>
+    <tr
+      mat-row
+      *matRowDef="
+        let row;
+        columns: [
+          'VehicleID',
+          'GPSTime',
+          'VehicleDirection',
+          'Longitude',
+          'Latitude',
+          'Status',
+          'Address',
+          'GPSSpeed',
+          'VehicleNumber'
+        ]
+      "
+    ></tr>
+  </table>
+</div>
