@@ -6,6 +6,7 @@ import { GetVehiclesComponent } from './vehicle/get-vehicles/get-vehicles.compon
 import { GetVehicleInformationComponent } from './vehicle-information/get-vehicle-information/get-vehicle-information.component';
 import { AddVehicleComponent } from './vehicle/add-vehicle/add-vehicle.component';
 import { GetDriversComponent } from './drivers/get-drivers/get-drivers.component';
+import { GeofenceListComponent } from './geofence/geofence-list/geofence-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,6 +16,8 @@ const routes: Routes = [
   { path: 'add-vehicle', component: AddVehicleComponent },
   { path: 'drivers', component: GetDriversComponent },
   { path: 'rout-history', component: GetRoutHistoryComponent },
+  { path: 'geofence', component: GeofenceListComponent },
+  
 ];
 
 @NgModule({

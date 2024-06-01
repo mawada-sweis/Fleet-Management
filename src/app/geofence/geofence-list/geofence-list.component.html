@@ -1,0 +1,32 @@
+<div class="geofence-list-container">
+  <h2>Geofence List</h2>
+  <div *ngIf="errorMessage">
+    <p>{{ errorMessage }}</p>
+  </div>
+  <table *ngIf="geofences.length > 0" class="geofence-table">
+    <thead>
+      <tr>
+        <th>Geofence ID</th>
+        <th>Geofence Type</th>
+        <th>Added Date</th>
+        <th>Stroke Color</th>
+        <th>Stroke Opacity</th>
+        <th>Stroke Weight</th>
+        <th>Fill Color</th>
+        <th>Fill Opacity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let geofence of geofences">
+        <td>{{ geofence.GeofenceID }}</td>
+        <td>{{ geofence.GeofenceType }}</td>
+        <td>{{ geofence.AddedDate }}</td>
+        <td>{{ geofence.StrockColor }}</td>
+        <td>{{ geofence.StrockOpacity }}</td>
+        <td>{{ geofence.StrockWeight }}</td>
+        <td>{{ geofence.FillColor }}</td>
+        <td>{{ geofence.FillOpacity }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

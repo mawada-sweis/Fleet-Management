@@ -1,0 +1,19 @@
+.geofence-list-container {
+  padding: 20px;
+}
+
+.geofence-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.geofence-table th,
+.geofence-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.geofence-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
