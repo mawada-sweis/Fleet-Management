@@ -1,31 +1,34 @@
 <h1>Vehicles</h1>
 <div *ngIf="errorMessage; else dataContent">
-    <p>{{ errorMessage }}</p>
-  </div>
-  
-  <ng-template #dataContent>
-    <app-add-vehicle (vehicleAdded)="onVehicleAdded($event)"></app-add-vehicle>
-  
-    <table class="vehicle-table" *ngIf="showTable">
-      <thead>
-        <tr>
-          <th>Vehicle ID</th>
-          <th>Vehicle Number</th>
-          <th>Vehicle Type</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let vehicle of VehiclesInformationsData; let i = index">
-          <td>{{ vehicle.VehicleID }}</td>
-          <td>{{ vehicle.VehicleNumber }}</td>
-          <td>{{ vehicle.VehicleType }}</td>
-          <td>
-            <button class="edit-button" (click)="openEditDialog(vehicle, i)">Edit</button>
-            <button class="delete-button" (click)="deleteVehicle(vehicle, i)">Delete</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </ng-template>
-  
+  <p>{{ errorMessage }}</p>
+</div>
+
+<ng-template #dataContent>
+  <app-add-vehicle (vehicleAdded)="onVehicleAdded($event)"></app-add-vehicle>
+
+  <table class="vehicle-table" *ngIf="showTable">
+    <thead>
+      <tr>
+        <th>Vehicle ID</th>
+        <th>Vehicle Number</th>
+        <th>Vehicle Type</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehicle of VehiclesInformationsData; let i = index">
+        <td>{{ vehicle.VehicleID }}</td>
+        <td>{{ vehicle.VehicleNumber }}</td>
+        <td>{{ vehicle.VehicleType }}</td>
+        <td>
+          <button class="edit-button" (click)="openEditDialog(vehicle, i)">
+            Edit
+          </button>
+          <button class="delete-button" (click)="deleteVehicle(vehicle, i)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>

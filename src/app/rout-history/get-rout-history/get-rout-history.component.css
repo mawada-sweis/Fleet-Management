@@ -15,16 +15,16 @@ button {
   margin-top: 20px;
 }
 
-  .add-vehicle {
-    background-color: #009879;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-bottom: 1%;
-  }
-  
-  .add-vehicle :hover {
-    background-color: #007a63;
-  }
+.add-vehicle {
+  background-color: #009879;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 1%;
+}
+
+.add-vehicle :hover {
+  background-color: #007a63;
+}

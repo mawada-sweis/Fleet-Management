@@ -3,14 +3,28 @@
   <form (ngSubmit)="updateVehicle()" class="dialog-form">
     <div class="form-group">
       <label for="editVehicleNumber">Vehicle Number:</label>
-      <input type="text" id="editVehicleNumber" [(ngModel)]="data.VehicleNumber" name="editVehicleNumber" required>
+      <input
+        type="text"
+        id="editVehicleNumber"
+        [(ngModel)]="data.VehicleNumber"
+        name="editVehicleNumber"
+        required
+      />
     </div>
     <div class="form-group">
       <label for="editVehicleType">Vehicle Type:</label>
-      <input type="text" id="editVehicleType" [(ngModel)]="data.VehicleType" name="editVehicleType" required>
+      <input
+        type="text"
+        id="editVehicleType"
+        [(ngModel)]="data.VehicleType"
+        name="editVehicleType"
+        required
+      />
     </div>
     <div class="dialog-actions">
-      <button mat-button type="submit" class="update-button">Update Vehicle</button>
+      <button mat-button type="submit" class="update-button">
+        Update Vehicle
+      </button>
       <button mat-button type="button" (click)="close()">Cancel</button>
     </div>
   </form>

@@ -22,25 +22,24 @@ export class GetDriversComponent implements OnInit {
   }
 
   getDriversDetails(): void {
-    this.driverService
-      .getDriversDetails()
-      .subscribe((response: GetDriverInformationResponse) => {
+    this.driverService.getDriversDetails().subscribe(
+      (response: GetDriverInformationResponse) => {
         if (response.DicOfDic['Tags']['STS'] === '1') {
-        this.drivers = response.DicOfDT.Driver;
-        this.showTable = true;
-        this.errorMessage = null;
-      } else {
+          this.drivers = response.DicOfDT.Driver;
+          this.showTable = true;
+          this.errorMessage = null;
+        } else {
+          this.showTable = false;
+          this.errorMessage = 'There is something wrong.';
+        }
+      },
+      (error) => {
         this.showTable = false;
-        this.errorMessage = 'There is something wrong.';
+        this.errorMessage = 'Error fetching data from server';
+        console.error(error);
       }
-    },
-    (error) => {
-      this.showTable = false;
-      this.errorMessage = 'Error fetching data from server';
-      console.error(error);
-    }
-  );
-}
+    );
+  }
   convertEpochToDatetime(epoch: string): string {
     const date = new Date(parseInt(epoch, 10) * 1000);
 

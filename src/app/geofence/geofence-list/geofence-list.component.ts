@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { GeofenceService } from '../../services/geofence.service';
-import { CircleGeofence, Geofence, PolygonGeofence, RectangleGeofence } from '../geofence.model';
+import {
+  CircleGeofence,
+  Geofence,
+  PolygonGeofence,
+  RectangleGeofence,
+} from '../geofence.model';
 import { MatDialog } from '@angular/material/dialog';
 import { GeofenceDetailDialogComponent } from '../geofence-detail-dialog/geofence-detail-dialog.component';
 
@@ -16,7 +21,10 @@ export class GeofenceListComponent implements OnInit {
   rectangleGeofences: RectangleGeofence[] = [];
   errorMessage: string = '';
 
-  constructor(private geofenceService: GeofenceService, public dialog: MatDialog) {}
+  constructor(
+    private geofenceService: GeofenceService,
+    public dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.loadGeofences();
@@ -41,18 +49,19 @@ export class GeofenceListComponent implements OnInit {
       }
     );
     this.geofenceService.getCircleGeofence().subscribe(
-      response => this.circleGeofences = response.DicOfDT.CircleGeofence,
-      error => this.errorMessage = 'Failed to load circle geofences.'
+      (response) => (this.circleGeofences = response.DicOfDT.CircleGeofence),
+      (error) => (this.errorMessage = 'Failed to load circle geofences.')
     );
 
     this.geofenceService.getPolygonGeofence().subscribe(
-      response => this.polygonGeofences = response.DicOfDT.PolygonGeofence,
-      error => this.errorMessage = 'Failed to load polygon geofences.'
+      (response) => (this.polygonGeofences = response.DicOfDT.PolygonGeofence),
+      (error) => (this.errorMessage = 'Failed to load polygon geofences.')
     );
 
     this.geofenceService.getRectangleGeofence().subscribe(
-      response => this.rectangleGeofences = response.DicOfDT.RectangleGeofence,
-      error => this.errorMessage = 'Failed to load rectangle geofences.'
+      (response) =>
+        (this.rectangleGeofences = response.DicOfDT.RectangleGeofence),
+      (error) => (this.errorMessage = 'Failed to load rectangle geofences.')
     );
   }
 
@@ -92,19 +101,25 @@ export class GeofenceListComponent implements OnInit {
 
     switch (geofence.GeofenceType) {
       case 'Circle':
-        geofenceDetails = this.circleGeofences.find(g => g.GeofenceID === geofence.GeofenceID);
+        geofenceDetails = this.circleGeofences.find(
+          (g) => g.GeofenceID === geofence.GeofenceID
+        );
         break;
       case 'Polygon':
-        geofenceDetails = this.polygonGeofences.find(g => g.GeofenceID === geofence.GeofenceID);
+        geofenceDetails = this.polygonGeofences.find(
+          (g) => g.GeofenceID === geofence.GeofenceID
+        );
         break;
       case 'Rectangle':
-        geofenceDetails = this.rectangleGeofences.find(g => g.GeofenceID === geofence.GeofenceID);
+        geofenceDetails = this.rectangleGeofences.find(
+          (g) => g.GeofenceID === geofence.GeofenceID
+        );
         break;
     }
 
     if (geofenceDetails) {
       this.dialog.open(GeofenceDetailDialogComponent, {
-        data: geofenceDetails
+        data: geofenceDetails,
       });
     }
   }

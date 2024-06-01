@@ -1,5 +1,5 @@
 <h1>Vehicle Informations</h1>
-<button mat-button class="add-vehicle-form"(click)="openAddDialog()">
+<button mat-button class="add-vehicle-form" (click)="openAddDialog()">
   Add new Vehicle Information
 </button>
 
@@ -26,8 +26,12 @@
         <td>{{ vehicle.VehicleModel }}</td>
         <td>{{ vehicle.PurchaseDate }}</td>
         <td>
-          <button class="edit-button" (click)="openEditDialog(vehicle, i)">Edit</button>
-          <button class="delete-button" (click)="openDeleteDialog(vehicle, i)">Delete</button>
+          <button class="edit-button" (click)="openEditDialog(vehicle, i)">
+            Edit
+          </button>
+          <button class="delete-button" (click)="openDeleteDialog(vehicle, i)">
+            Delete
+          </button>
         </td>
       </tr>
     </tbody>

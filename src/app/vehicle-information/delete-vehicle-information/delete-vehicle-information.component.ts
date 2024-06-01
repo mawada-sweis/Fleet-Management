@@ -5,7 +5,7 @@ import { VehicleInformationService } from 'src/app/services/vehicle-information.
 @Component({
   selector: 'app-delete-vehicle-information',
   templateUrl: './delete-vehicle-information.component.html',
-  styleUrls: ['./delete-vehicle-information.component.css']
+  styleUrls: ['./delete-vehicle-information.component.css'],
 })
 export class DeleteVehicleInformationComponent {
   vehicle: any;
@@ -19,15 +19,17 @@ export class DeleteVehicleInformationComponent {
   }
 
   onDelete(): void {
-    this.vehicleInformationService.deleteVehicleInformation(this.vehicle).subscribe(
-      () => {
-        this.dialogRef.close(true);
-      },
-      (error) => {
-        console.error('Error deleting vehicle information:', error);
-        this.dialogRef.close(false);
-      }
-    );
+    this.vehicleInformationService
+      .deleteVehicleInformation(this.vehicle)
+      .subscribe(
+        () => {
+          this.dialogRef.close(true);
+        },
+        (error) => {
+          console.error('Error deleting vehicle information:', error);
+          this.dialogRef.close(false);
+        }
+      );
   }
 
   onCancel(): void {

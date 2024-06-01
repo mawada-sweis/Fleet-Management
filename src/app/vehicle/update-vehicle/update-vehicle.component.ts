@@ -1,14 +1,18 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { VehicleService } from '../../services/vehicle.service';
-import { Vehicle, UpdateVehicleResponse, UpdateVehicleRequest } from './update-vehicle.model';
+import {
+  Vehicle,
+  UpdateVehicleResponse,
+  UpdateVehicleRequest,
+} from './update-vehicle.model';
 
 @Component({
   selector: 'app-update-vehicle',
   templateUrl: './update-vehicle.component.html',
-  styleUrls: ['./update-vehicle.component.css']
+  styleUrls: ['./update-vehicle.component.css'],
 })
-export class UpdateVehicleComponent  {
+export class UpdateVehicleComponent {
   constructor(
     public dialogRef: MatDialogRef<UpdateVehicleComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Vehicle,

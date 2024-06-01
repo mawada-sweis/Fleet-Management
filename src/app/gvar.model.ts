@@ -3,15 +3,14 @@ export interface DicOfDic {
 }
 
 export interface DicOfDT<T = any> {
-    [key: string]: T[];
-  }
-  
+  [key: string]: T[];
+}
 
 export interface GVARRequest {
   DicOfDic: DicOfDic;
 }
 
-export interface GVARResponse<T = any>{
+export interface GVARResponse<T = any> {
   DicOfDic: DicOfDic;
   DicOfDT: DicOfDT<T>;
 }

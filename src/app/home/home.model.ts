@@ -1,5 +1,5 @@
 // vehicle-information.model.ts
-import { GVARRequest, GVARResponse } from "../gvar.model";
+import { GVARRequest, GVARResponse } from '../gvar.model';
 
 export interface VehiclesInformations {
   VehicleID: string;
@@ -12,7 +12,7 @@ export interface VehiclesInformations {
   LastAddress: string;
 }
 
-export interface Vehicle{
+export interface Vehicle {
   VehicleMake: string;
   LastGPSSpeed: string;
   PhoneNumber: string;
@@ -22,7 +22,8 @@ export interface Vehicle{
   LastPosition?: string;
 }
 
-export interface VehicleInformationsResponse extends GVARResponse<VehiclesInformations> {
+export interface VehicleInformationsResponse
+  extends GVARResponse<VehiclesInformations> {
   DicOfDT: {
     VehiclesInformations: VehiclesInformations[];
   };
@@ -41,4 +42,3 @@ export interface SpecificVehicleInformationRequest extends GVARRequest {
     };
   };
 }
-

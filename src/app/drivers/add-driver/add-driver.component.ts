@@ -6,7 +6,7 @@ import { DriverService } from '../../services/driver.service';
 @Component({
   selector: 'app-add-driver',
   templateUrl: './add-driver.component.html',
-  styleUrls: ['./add-driver.component.css']
+  styleUrls: ['./add-driver.component.css'],
 })
 export class AddDriverComponent {
   driverForm: FormGroup;
@@ -18,15 +18,17 @@ export class AddDriverComponent {
   ) {
     this.driverForm = this.fb.group({
       DriverName: ['', Validators.required],
-      PhoneNumber: ['', Validators.required]
+      PhoneNumber: ['', Validators.required],
     });
   }
 
   onSubmit(): void {
     if (this.driverForm.valid) {
-      this.driverService.addDriver(this.driverForm.value).subscribe(response => {
-        this.dialogRef.close(response);
-      });
+      this.driverService
+        .addDriver(this.driverForm.value)
+        .subscribe((response) => {
+          this.dialogRef.close(response);
+        });
     }
   }
 

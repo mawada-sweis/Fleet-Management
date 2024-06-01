@@ -1,7 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { GetCircleGeofenceResponse, GetGeofenceInformationResponse, GetPolygonGeofenceResponse, GetRectangleGeofenceResponse } from '../geofence/geofence.model';
+import {
+  GetCircleGeofenceResponse,
+  GetGeofenceInformationResponse,
+  GetPolygonGeofenceResponse,
+  GetRectangleGeofenceResponse,
+} from '../geofence/geofence.model';
 
 @Injectable({
   providedIn: 'root',

@@ -1,4 +1,4 @@
-import { GVARRequest, GVARResponse } from "../../gvar.model";
+import { GVARRequest, GVARResponse } from '../../gvar.model';
 
 export interface Vehicle {
   VehicleNumber: string;
@@ -15,7 +15,7 @@ export interface DeleteVehicleResponse extends GVARResponse<Vehicle> {
 export interface DeleteVehicleRequest extends GVARRequest {
   DicOfDic: {
     Tags: {
-      VehicleID: string
+      VehicleID: string;
     };
   };
 }

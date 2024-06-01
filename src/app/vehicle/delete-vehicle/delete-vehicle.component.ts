@@ -5,12 +5,16 @@ import { Vehicle, DeleteVehicleResponse } from './delete-vehicle.model';
 @Component({
   selector: 'app-delete-vehicle',
   templateUrl: './delete-vehicle.component.html',
-  styleUrls: ['./delete-vehicle.component.css']
+  styleUrls: ['./delete-vehicle.component.css'],
 })
 export class DeleteVehicleComponent {
   constructor(private vehicleService: VehicleService) {}
 
-  deleteVehicle(vehicle: Vehicle, index: number, vehiclesList: Vehicle[]): void {
+  deleteVehicle(
+    vehicle: Vehicle,
+    index: number,
+    vehiclesList: Vehicle[]
+  ): void {
     this.vehicleService.deleteVehicle(vehicle).subscribe(
       (response: DeleteVehicleResponse) => {
         console.log('Vehicle deleted successfully', response);

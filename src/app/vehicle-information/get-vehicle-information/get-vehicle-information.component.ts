@@ -10,29 +10,34 @@ import { DeleteVehicleInformationComponent } from '../delete-vehicle-information
 @Component({
   selector: 'app-get-vehicle-information',
   templateUrl: './get-vehicle-information.component.html',
-  styleUrls: ['./get-vehicle-information.component.css']
+  styleUrls: ['./get-vehicle-information.component.css'],
 })
-
 export class GetVehicleInformationComponent implements OnInit {
   VehiclesInformationsData: VehicleInformation[] = [];
   showTable: boolean = false;
   errorMessage: string | null = null;
   editIndex: number | null = null;
 
-  constructor(private vehicleInformationService: VehicleInformationService, public dialog: MatDialog) {}
+  constructor(
+    private vehicleInformationService: VehicleInformationService,
+    public dialog: MatDialog
+  ) {}
 
-  ngOnInit(): void {this.loadVehicles();}
+  ngOnInit(): void {
+    this.loadVehicles();
+  }
 
   loadVehicles(): void {
     this.vehicleInformationService.getVehicleInformation().subscribe(
       (response: GetVehicleInformationResponse) => {
         if (response.DicOfDic['Tags']['STS'] === '1') {
-          this.VehiclesInformationsData = response.DicOfDT.VehiclesInformations.map(vehicle => {
-            return {
-              ...vehicle,
-              PurchaseDate: this.convertEpochToDatetime(vehicle.PurchaseDate)
-            };
-          });
+          this.VehiclesInformationsData =
+            response.DicOfDT.VehiclesInformations.map((vehicle) => {
+              return {
+                ...vehicle,
+                PurchaseDate: this.convertEpochToDatetime(vehicle.PurchaseDate),
+              };
+            });
           this.showTable = true;
           this.errorMessage = null;
         } else {
@@ -50,23 +55,42 @@ export class GetVehicleInformationComponent implements OnInit {
 
   convertEpochToDatetime(epoch: string): string {
     const date = new Date(parseInt(epoch, 10) * 1000);
-    
-    const year = new Intl.DateTimeFormat('en', { year: 'numeric', timeZone: 'UTC' }).format(date);
-    const month = new Intl.DateTimeFormat('en', { month: '2-digit', timeZone: 'UTC' }).format(date);
-    const day = new Intl.DateTimeFormat('en', { day: '2-digit', timeZone: 'UTC' }).format(date);
-    const hour = new Intl.DateTimeFormat('en', { hour: '2-digit', hour12: false, timeZone: 'UTC' }).format(date);
-    const minute = new Intl.DateTimeFormat('en', { minute: '2-digit', timeZone: 'UTC' }).format(date);
-    const second = new Intl.DateTimeFormat('en', { second: '2-digit', timeZone: 'UTC' }).format(date);
-  
+
+    const year = new Intl.DateTimeFormat('en', {
+      year: 'numeric',
+      timeZone: 'UTC',
+    }).format(date);
+    const month = new Intl.DateTimeFormat('en', {
+      month: '2-digit',
+      timeZone: 'UTC',
+    }).format(date);
+    const day = new Intl.DateTimeFormat('en', {
+      day: '2-digit',
+      timeZone: 'UTC',
+    }).format(date);
+    const hour = new Intl.DateTimeFormat('en', {
+      hour: '2-digit',
+      hour12: false,
+      timeZone: 'UTC',
+    }).format(date);
+    const minute = new Intl.DateTimeFormat('en', {
+      minute: '2-digit',
+      timeZone: 'UTC',
+    }).format(date);
+    const second = new Intl.DateTimeFormat('en', {
+      second: '2-digit',
+      timeZone: 'UTC',
+    }).format(date);
+
     return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
   }
 
   openAddDialog(): void {
     const dialogRef = this.dialog.open(AddVehicleInformationComponent, {
-      width: '400px'
+      width: '400px',
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.VehiclesInformationsData.push(result);
         this.loadVehicles();
@@ -78,10 +102,10 @@ export class GetVehicleInformationComponent implements OnInit {
     this.editIndex = index;
     const dialogRef = this.dialog.open(UpdateVehicleInformationComponent, {
       width: '400px',
-      data: { ...vehicle, ID: vehicle.ID }
+      data: { ...vehicle, ID: vehicle.ID },
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       if (result && this.editIndex !== null) {
         this.VehiclesInformationsData[this.editIndex] = result;
         this.editIndex = null;
@@ -93,10 +117,10 @@ export class GetVehicleInformationComponent implements OnInit {
   openDeleteDialog(vehicle: VehicleInformation, index: number): void {
     const dialogRef = this.dialog.open(DeleteVehicleInformationComponent, {
       width: '400px',
-      data: { vehicle }
+      data: { vehicle },
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.VehiclesInformationsData.splice(index, 1);
         this.loadVehicles();

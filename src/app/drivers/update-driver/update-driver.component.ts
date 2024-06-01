@@ -7,7 +7,7 @@ import { Driver } from '../get-drivers/get-drivers.model';
 @Component({
   selector: 'app-update-driver',
   templateUrl: './update-driver.component.html',
-  styleUrls: ['./update-driver.component.css']
+  styleUrls: ['./update-driver.component.css'],
 })
 export class UpdateDriverComponent {
   driverForm: FormGroup;
@@ -21,15 +21,17 @@ export class UpdateDriverComponent {
     this.driverForm = this.fb.group({
       DriverName: [data.DriverName, Validators.required],
       PhoneNumber: [data.PhoneNumber, Validators.required],
-      DriverID: [data.DriverID, Validators.required]
+      DriverID: [data.DriverID, Validators.required],
     });
   }
 
   onSubmit(): void {
     if (this.driverForm.valid) {
-      this.driverService.updateDriver(this.driverForm.value).subscribe(response => {
-        this.dialogRef.close(response);
-      });
+      this.driverService
+        .updateDriver(this.driverForm.value)
+        .subscribe((response) => {
+          this.dialogRef.close(response);
+        });
     }
   }
 

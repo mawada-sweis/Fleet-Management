@@ -28,7 +28,15 @@
         <td>{{ vehicle.LastAddress }}</td>
         <td>{{ vehicle.Latitude }}</td>
         <td>{{ vehicle.Longitude }}</td>
-        <td><button mat-button class="show-more" (click)="openDialog(vehicle.VehicleID)">Show More</button></td>
+        <td>
+          <button
+            mat-button
+            class="show-more"
+            (click)="openDialog(vehicle.VehicleID)"
+          >
+            Show More
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

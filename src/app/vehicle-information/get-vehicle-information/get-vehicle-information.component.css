@@ -1,81 +1,78 @@
 /* src/app/vehicle-information/vehicle-information.component.css */
 .vehicle-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 18px;
-    text-align: left;
-  }
-  
-  .vehicle-table thead tr {
-    text-align: left;
-    font-weight: bold;
-  }
-  
-  .vehicle-table th,
-  .vehicle-table td {
-    padding: 12px 15px;
-    border: 1px solid #dddddd;
-  }
-  
-  .vehicle-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-  }
-  
-  .vehicle-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-  }
-  
-  
-  .vehicle-table tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
-  }
-  
-  .vehicle-table p {
-    color: red;
-    font-size: 16px;
-    margin: 10px 0;
-  }
-  
-  .add-vehicle-form {
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    background-color: #009879;
-    font-weight: bold;
-    color: white;
-    font-size: 17px;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
 
-  }
-  
-  .edit-button {
-    background-color: #f0ad4e;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 1%;
+.vehicle-table thead tr {
+  text-align: left;
+  font-weight: bold;
+}
 
-    padding: 8px 16px;
-  }
-  
-  .edit-button:hover {
-    background-color: #ec971f;
-  }
-  
-  .delete-button {
-    background-color: #cd4d26;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 1%;
-    padding: 8px 16px;
-  }
-  
-  .delete-button:hover {
-    background-color: #aa3a18;
-  }
-  
+.vehicle-table th,
+.vehicle-table td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+}
+
+.vehicle-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.vehicle-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.vehicle-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.vehicle-table p {
+  color: red;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.add-vehicle-form {
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  background-color: #009879;
+  font-weight: bold;
+  color: white;
+  font-size: 17px;
+}
+
+.edit-button {
+  background-color: #f0ad4e;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 1%;
+
+  padding: 8px 16px;
+}
+
+.edit-button:hover {
+  background-color: #ec971f;
+}
+
+.delete-button {
+  background-color: #cd4d26;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 1%;
+  padding: 8px 16px;
+}
+
+.delete-button:hover {
+  background-color: #aa3a18;
+}

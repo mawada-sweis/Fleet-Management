@@ -8,7 +8,7 @@ import { VehicleInformation } from '../get-vehicle-information/get-vehicle-infor
 @Component({
   selector: 'app-update-vehicle-information',
   templateUrl: './update-vehicle-information.component.html',
-  styleUrls: ['./update-vehicle-information.component.css']
+  styleUrls: ['./update-vehicle-information.component.css'],
 })
 export class UpdateVehicleInformationComponent {
   editVehicleForm: FormGroup;
@@ -25,16 +25,18 @@ export class UpdateVehicleInformationComponent {
       VehicleMake: [data.VehicleMake, Validators.required],
       VehicleModel: [data.VehicleModel, Validators.required],
       PurchaseDate: [data.PurchaseDate, Validators.required],
-      ID: [data.ID, Validators.required]
+      ID: [data.ID, Validators.required],
     });
   }
 
   onSubmit(): void {
     if (this.editVehicleForm.valid) {
       const updatedVehicle: VehicleInformation = this.editVehicleForm.value;
-      this.vehicleInformationService.updateVehicleInformation(updatedVehicle).subscribe((response: UpdateVehicleInformationResponse) => {
-        this.dialogRef.close(response.DicOfDT.VehiclesInformations[0]);
-      });
+      this.vehicleInformationService
+        .updateVehicleInformation(updatedVehicle)
+        .subscribe((response: UpdateVehicleInformationResponse) => {
+          this.dialogRef.close(response.DicOfDT.VehiclesInformations[0]);
+        });
     }
   }
 

@@ -7,7 +7,7 @@ import { VehicleInformationService } from '../../services/vehicle-information.se
 @Component({
   selector: 'app-add-vehicle-information',
   templateUrl: './add-vehicle-information.component.html',
-  styleUrls: ['./add-vehicle-information.component.css']
+  styleUrls: ['./add-vehicle-information.component.css'],
 })
 export class AddVehicleInformationComponent {
   addVehicleForm: FormGroup;
@@ -23,16 +23,18 @@ export class AddVehicleInformationComponent {
       DriverID: ['', Validators.required],
       VehicleMake: ['', Validators.required],
       VehicleModel: ['', Validators.required],
-      PurchaseDate: ['', Validators.required]
+      PurchaseDate: ['', Validators.required],
     });
   }
 
   onSubmit(): void {
     if (this.addVehicleForm.valid) {
       const newVehicle: VehicleInformation = this.addVehicleForm.value;
-      this.vehicleInformationService.addVehicleInformation(newVehicle).subscribe(response => {
-        this.dialogRef.close(response);
-      });
+      this.vehicleInformationService
+        .addVehicleInformation(newVehicle)
+        .subscribe((response) => {
+          this.dialogRef.close(response);
+        });
     }
   }
 

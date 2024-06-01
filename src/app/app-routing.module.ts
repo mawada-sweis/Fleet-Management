@@ -17,7 +17,6 @@ const routes: Routes = [
   { path: 'drivers', component: GetDriversComponent },
   { path: 'rout-history', component: GetRoutHistoryComponent },
   { path: 'geofence', component: GeofenceListComponent },
-  
 ];
 
 @NgModule({

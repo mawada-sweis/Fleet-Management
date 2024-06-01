@@ -5,14 +5,14 @@ import { AddVehicleResponse, Vehicle } from './add-vehicle.model';
 @Component({
   selector: 'app-add-vehicle',
   templateUrl: './add-vehicle.component.html',
-  styleUrls: ['./add-vehicle.component.css']
+  styleUrls: ['./add-vehicle.component.css'],
 })
-export class AddVehicleComponent{
+export class AddVehicleComponent {
   @Output() vehicleAdded = new EventEmitter<Vehicle>();
   newVehicle: Vehicle = {
     VehicleNumber: '',
     VehicleType: '',
-    VehicleID: ''
+    VehicleID: '',
   };
 
   constructor(private vehicleService: VehicleService) {}
@@ -21,12 +21,20 @@ export class AddVehicleComponent{
     this.vehicleService.addVehicle(this.newVehicle).subscribe(
       (response: AddVehicleResponse) => {
         console.log('Vehicle added successfully', response);
-        if (response.DicOfDT && response.DicOfDT.Vehicles && response.DicOfDT.Vehicles.length > 0) {
+        if (
+          response.DicOfDT &&
+          response.DicOfDT.Vehicles &&
+          response.DicOfDT.Vehicles.length > 0
+        ) {
           this.vehicleAdded.emit(response.DicOfDT.Vehicles[0]);
-          this.newVehicle = { VehicleID: '', VehicleNumber: '', VehicleType: '' };
+          this.newVehicle = {
+            VehicleID: '',
+            VehicleNumber: '',
+            VehicleType: '',
+          };
         }
       },
-      error => {
+      (error) => {
         console.error('Error adding vehicle', error);
       }
     );

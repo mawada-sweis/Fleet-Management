@@ -1,4 +1,4 @@
-import { GVARRequest, GVARResponse } from "../../gvar.model";
+import { GVARRequest, GVARResponse } from '../../gvar.model';
 
 export interface Vehicle {
   VehicleNumber: string;

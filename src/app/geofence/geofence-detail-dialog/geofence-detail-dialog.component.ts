@@ -4,7 +4,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-geofence-detail-dialog',
   templateUrl: './geofence-detail-dialog.component.html',
-  styleUrls: ['./geofence-detail-dialog.component.css']
+  styleUrls: ['./geofence-detail-dialog.component.css'],
 })
 export class GeofenceDetailDialogComponent {
   constructor(
