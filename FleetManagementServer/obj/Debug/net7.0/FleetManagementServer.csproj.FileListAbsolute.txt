@@ -1,0 +1,82 @@
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\appsettings.json
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\FleetManagementServer.exe
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\FleetManagementServer.deps.json
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\FleetManagementServer.runtimeconfig.json
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\FleetManagementServer.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\FleetManagementServer.pdb
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\FleetManagementLibrary.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\FleetManagementLibrary.pdb
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.csproj.AssemblyReference.cache
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.AssemblyInfoInputs.cache
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.AssemblyInfo.cs
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\staticwebassets\msbuild.FleetManagementServer.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\staticwebassets\msbuild.build.FleetManagementServer.props
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.FleetManagementServer.props
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.FleetManagementServer.props
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\scopedcss\bundle\FleetManagementServer.styles.css
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.csproj.CopyComplete
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\refint\FleetManagementServer.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.pdb
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.genruntimeconfig.cache
+C:\Users\DELL\Source\Repos\FleetManagementServer\obj\Debug\net7.0\ref\FleetManagementServer.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\Npgsql.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\FleetManagementShared.dll
+C:\Users\DELL\Source\Repos\FleetManagementServer\bin\Debug\net7.0\FleetManagementShared.pdb
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\appsettings.json
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\FleetManagementServer.exe
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\FleetManagementServer.deps.json
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\FleetManagementServer.runtimeconfig.json
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\FleetManagementServer.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\FleetManagementServer.pdb
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\Npgsql.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\FleetManagementLibrary.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\FleetManagementShared.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\FleetManagementLibrary.pdb
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\bin\Debug\net7.0\FleetManagementShared.pdb
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.csproj.AssemblyReference.cache
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.AssemblyInfoInputs.cache
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.AssemblyInfo.cs
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\staticwebassets\msbuild.FleetManagementServer.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\staticwebassets\msbuild.build.FleetManagementServer.props
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.FleetManagementServer.props
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.FleetManagementServer.props
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\scopedcss\bundle\FleetManagementServer.styles.css
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.csproj.CopyComplete
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\refint\FleetManagementServer.dll
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.pdb
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\FleetManagementServer.genruntimeconfig.cache
+C:\Users\DELL\Source\Repos\Frontend Fleet Management\fleetManagement\FleetManagementServer\obj\Debug\net7.0\ref\FleetManagementServer.dll
