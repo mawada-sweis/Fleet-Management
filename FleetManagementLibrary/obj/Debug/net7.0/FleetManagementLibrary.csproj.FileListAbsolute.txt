@@ -1,0 +1,15 @@
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\bin\Debug\net7.0\FleetManagementLibrary.deps.json
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\bin\Debug\net7.0\FleetManagementLibrary.dll
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\bin\Debug\net7.0\FleetManagementLibrary.pdb
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\obj\Debug\net7.0\FleetManagementLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\obj\Debug\net7.0\FleetManagementLibrary.AssemblyInfoInputs.cache
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\obj\Debug\net7.0\FleetManagementLibrary.AssemblyInfo.cs
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\obj\Debug\net7.0\FleetManagementLibrary.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\obj\Debug\net7.0\FleetManagementLibrary.dll
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\obj\Debug\net7.0\refint\FleetManagementLibrary.dll
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\obj\Debug\net7.0\FleetManagementLibrary.pdb
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\obj\Debug\net7.0\ref\FleetManagementLibrary.dll
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\obj\Debug\net7.0\FleetManagementLibrary.csproj.AssemblyReference.cache
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\bin\Debug\net7.0\FleetManagementShared.dll
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\bin\Debug\net7.0\FleetManagementShared.pdb
+C:\Users\DELL\Source\Repos\FleetManagementLibrary\obj\Debug\net7.0\FleetManagementLibrary.csproj.CopyComplete
