@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "BA1WHCDkteSObjhUSjNxwOd8zfoOUfl4ZJa1QE3uLU8=",
+  "Source": "FleetManagementServer",
+  "BasePath": "_content/FleetManagementServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
