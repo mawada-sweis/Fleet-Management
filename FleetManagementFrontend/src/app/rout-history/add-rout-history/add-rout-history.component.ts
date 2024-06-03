@@ -20,7 +20,8 @@ export class AddRoutHistoryComponent implements OnInit {
   vehicles: Vehicle[] = [];
   addRouteHistoryForm: FormGroup;
   errorMessage: string | null = null;
-
+  statuses: string[] = ['Stopped', 'Moving', 'Idle', 'OutOfService', 'Maintenance'];
+  
   constructor(
     private fb: FormBuilder,
     private routHistoryService: RoutHistoryService,
