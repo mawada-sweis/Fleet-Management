@@ -1,11 +1,6 @@
 using FleetManagementLibrary;
 using FleetManagementShared;
-using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Hosting;
-using System;
 
 
 namespace FleetManagementServer
@@ -28,16 +23,6 @@ namespace FleetManagementServer
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Fleet Management", Version = "v1" });
             });
 
-            // Configure CORS policy
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAll",
-                    builder => builder
-                        .AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader());
-            });
-
             // Build configuration
             IConfiguration configuration = builder.Configuration;
             string connectionStringTemplate = configuration.GetConnectionString("DefaultConnection");
@@ -51,16 +36,29 @@ namespace FleetManagementServer
                 return new EndpointsRepository(connectionString, webSocketManager);
             });
 
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
+                    });
+            });
+
             var app = builder.Build();
+
+            app.UseCors("AllowAll");
+            app.UseDeveloperExceptionPage();
+            app.UseRouting();
+            app.UseCors("AllowAll");
 
             // Configure the HTTP request pipeline.
             app.UseSwagger();
             app.UseSwaggerUI();
             app.UseHttpsRedirection();
-
-            app.UseCors("AllowAllOrigins");
-            app.UseDeveloperExceptionPage();
-            app.UseRouting();
 
             // Enable WebSocket support
             app.UseWebSockets();

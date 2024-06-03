@@ -35,7 +35,7 @@ export class UpdateVehicleInformationComponent {
       this.vehicleInformationService
         .updateVehicleInformation(updatedVehicle)
         .subscribe((response: UpdateVehicleInformationResponse) => {
-          this.dialogRef.close(response.DicOfDT.VehiclesInformations[0]);
+          this.dialogRef.close(response);
         });
     }
   }

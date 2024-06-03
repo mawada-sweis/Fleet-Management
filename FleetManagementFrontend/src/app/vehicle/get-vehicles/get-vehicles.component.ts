@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { VehicleService } from './../../services/vehicle.service';
 import { Vehicle, GetVehicleResponse } from './get-vehicles.model';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { UpdateVehicleComponent } from '../update-vehicle/update-vehicle.component';
 
 @Component({
@@ -61,37 +61,22 @@ export class GetVehiclesComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.updateVehicle(result);
+        const updatedVehicle = result.DicOfDT?.Vehicles?.find(
+          (v: Vehicle) => v.VehicleID === vehicle.VehicleID
+        );
+
+        if (updatedVehicle && this.editIndex !== null) {
+          this.VehiclesInformationsData[this.editIndex] = {
+            ...updatedVehicle,
+          };
+          this.VehiclesInformationsData.sort((a, b) =>
+            a.VehicleID.localeCompare(b.VehicleID)
+          );
+          this.loadVehicles();
+          this.editIndex = null;
+        }
       }
     });
-  }
-
-  updateVehicle(updatedVehicle: Vehicle): void {
-    if (this.editIndex !== null) {
-      this.vehicleService.updateVehicle(updatedVehicle).subscribe(
-        (response: GetVehicleResponse) => {
-          console.log('Vehicle updated successfully', response);
-          if (
-            response.DicOfDT &&
-            response.DicOfDT.Vehicles &&
-            response.DicOfDT.Vehicles.length > 0
-          ) {
-            if (this.editIndex !== null) {
-              this.VehiclesInformationsData[this.editIndex] = {
-                ...updatedVehicle,
-              };
-              this.VehiclesInformationsData.sort((a, b) =>
-                a.VehicleID.localeCompare(b.VehicleID)
-              );
-              this.editIndex = null;
-            }
-          }
-        },
-        (error: any) => {
-          console.error('Error updating vehicle', error);
-        }
-      );
-    }
   }
 
   deleteVehicle(vehicle: Vehicle, index: number): void {

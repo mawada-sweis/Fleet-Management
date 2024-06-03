@@ -11,7 +11,6 @@ export interface RoutHistory {
   Status: string;
   Address: string;
   GPSSpeed: string;
-  VehicleNumber: string;
 }
 
 export interface GetRoutHistoryRequest extends GVARRequest {

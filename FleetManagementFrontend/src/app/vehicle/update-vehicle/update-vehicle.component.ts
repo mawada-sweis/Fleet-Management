@@ -22,8 +22,7 @@ export class UpdateVehicleComponent {
   updateVehicle(): void {
     this.vehicleService.updateVehicle(this.data).subscribe(
       (response: UpdateVehicleResponse) => {
-        console.log('Vehicle updated successfully', response);
-        this.dialogRef.close(this.data);
+        this.dialogRef.close(response);
       },
       (error: any) => {
         console.error('Error updating vehicle', error);

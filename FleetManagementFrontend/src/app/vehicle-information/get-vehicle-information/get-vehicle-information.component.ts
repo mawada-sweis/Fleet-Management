@@ -102,14 +102,28 @@ export class GetVehicleInformationComponent implements OnInit {
     this.editIndex = index;
     const dialogRef = this.dialog.open(UpdateVehicleInformationComponent, {
       width: '400px',
-      data: { ...vehicle, ID: vehicle.ID },
+      data: { 
+        ...vehicle, 
+        ID: vehicle.ID, 
+        PurchesDate: this.convertEpochToDatetime(vehicle.PurchaseDate), 
+      },
     });
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result && this.editIndex !== null) {
-        this.VehiclesInformationsData[this.editIndex] = result;
-        this.editIndex = null;
-        this.loadVehicles();
+        const updatedVehicle = result.DicOfDT?.VehiclesInformations?.find(
+          (v: VehicleInformation) => v.ID === vehicle.ID
+        );
+  
+        if (updatedVehicle) {
+          updatedVehicle.PurchaseDate = this.convertEpochToDatetime(updatedVehicle.PurchaseDate);
+          this.VehiclesInformationsData[this.editIndex] = updatedVehicle;
+          this.editIndex = null;
+          this.VehiclesInformationsData.sort((a, b) =>
+            a.VehicleID.localeCompare(b.VehicleID)
+          );
+          this.loadVehicles();
+        }
       }
     });
   }

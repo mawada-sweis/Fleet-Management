@@ -66,8 +66,7 @@ export class GetRoutHistoryComponent implements OnInit {
                   Latitude: history.Latitude,
                   Status: history.Status,
                   Address: history.Address,
-                  GPSSpeed: history.GPSSpeed,
-                  VehicleNumber: history.VehicleNumber,
+                  GPSSpeed: history.GPSSpeed
                 })
               ).sort(
                 (a, b) =>

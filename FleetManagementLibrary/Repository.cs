@@ -308,7 +308,7 @@ namespace FleetManagementLibrary
 
                                 if (cmd.ExecuteScalar() != null)
                                 {
-                                    gvarData.DicOfDic["Tags"].TryAdd("STS", "1");
+                                    gvarData.DicOfDic["Tags"]["STS"] = "1";
                                     var vehiclesData = RetrieveData("\"Vehicles\"");
                                     gvarData.DicOfDT["Vehicles"] = vehiclesData;
                                     Console.WriteLine("Update data in Vehicles table successfully.");
@@ -316,7 +316,7 @@ namespace FleetManagementLibrary
 
                                 else
                                 {
-                                    gvarData.DicOfDic["Tags"].TryAdd("STS", "0");
+                                    gvarData.DicOfDic["Tags"]["STS"] = "0";
                                 }
                             }
                             else
